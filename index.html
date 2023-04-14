@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>E-commerce product page</title>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      * {
+        /* ## Colors */
+
+        /* ### Primary */
+        --Orange: #ff7d1a;
+        --Pale-orange: #ffede0;
+        /* ### Neutral */
+        --Very-dark-blue: #1d2025;
+        --Dark-grayish-blue: #68707d;
+        --Grayish-blue: #b6bcc8;
+        --Light-grayish-blue: #f7f8fd;
+        --White: #ffffff;
+        --Black-with-75-opacity-for-lightbox-background: #000000;
+
+        /* ## Typography */
+
+        /* ### Body Copy */
+        --Font-size-paragraph: 16px;
+      }
+      @layer utilities{
+        .font-family{
+          font-family: 'Kumbh Sans', sans-serif;
+        }
+      }
+    }
+  </style>
+</head>
+<body class="font-family select-none">
+  <nav class="w-[80%] h-auto mx-auto mt-[40px] pb-[19px] flex flex-row justify-between border-b-[1px] border-[#b6bcc] max-[757px]:w-full sticky z-2 top-0 bg-white">
+    <div class="fristnav flex justify-between w-[60%] self-center relative">
+      <div class="menu bg-[url('images/icon-menu.svg')] bg-no-repeat bg-cover w-[19px] h-[17px] hidden max-[876px]:block cursor-pointer"></div>
+      <div class="menuList absolute top-[-195%] left-[0%] w-full h-full  hidden">
+        <div class="closeMenu sticky  top-[10px] z-20 bg-[url('images/icon-close.svg')] bg-no-repeat bg-cover ml-[10px] w-[20px] h-[20px] cursor-pointer"></div>
+        <ul class="flex flex-col absolute justify-around w-[100%] h-full bg-white px-[10px] pb-[434px] pt-[84px] text-[#68707d] font-bold">
+          <a href="#" class="hover:text-[#ff7d1a] text-black"><li>Collections</li></a>
+          <a href="#" class="hover:text-[#ff7d1a] text-black"><li>Men</li></a>
+          <a href="#" class="hover:text-[#ff7d1a] text-black"><li>Women</li></a>
+          <a href="#" class="hover:text-[#ff7d1a] text-black"><li>Contact</li></a>
+        </ul>
+      </div>
+      <a href="#"><div class="logo bg-[url('images/logo.svg')] bg-no-repeat bg-cover w-[125px] h-[18px]"></div></a>
+      <ul class="flex justify-evenly w-[70%] text-[#68707d] font-normal max-[876px]:hidden ">
+        <a href="#" class="hover:underline hover:decoration-[#ff7d1a] hover:decoration-[3px] hover:underline-offset-[31px] hover:text-black"><li>Collections</li></a>
+        <a href="#" class="hover:underline hover:decoration-[#ff7d1a] hover:decoration-[3px] hover:underline-offset-[31px] hover:text-black"><li>Men</li></a>
+        <a href="#" class="hover:underline hover:decoration-[#ff7d1a] hover:decoration-[3px] hover:underline-offset-[31px] hover:text-black"><li>Women</li></a>
+        <a href="#" class="hover:underline hover:decoration-[#ff7d1a] hover:decoration-[3px] hover:underline-offset-[31px] hover:text-black"><li>Contact</li></a>
+      </ul>
+    </div>
+    <div class="secoundnav relative">
+      <div class="basket_avatar flex justify-between w-[100px]">
+        <div class="basket bg-[url('images/icon-cart.svg')] bg-no-repeat bg-cover w-[22px] h-[20px] self-center cursor-pointer relative"><span class="notification hidden absolute top-[-5px] right-[-5px] bg-[#ff7d1a] text-white text-center  px-[2px] w-[18px] h-[12px] text-[.6rem] rounded-xl">3</span></div>
+        <div class="avatar bg-[url('images/image-avatar.png')] bg-no-repeat bg-cover w-[40px] h-[40px] rounded-[50%] hover:border-[2px]  hover:border-[#ff7d1a] cursor-pointer "></div>
+      </div>
+      <div class="panel absolute left-[-135px] w-[280px] h-[200px] bg-white rounded-lg drop-shadow-2xl hidden max-[756px]:left-[-202px]">
+        <h1 class="font-bold text-[1rem] p-[10px]">Cart</h1>
+        <hr>
+        <div class="yourAdd">
+          <h1 class="font-bold text-[#68707d] text-[1rem] text-center mt-[21%]">Your Cart is empty.</h1>
+        </div>
+        <div class="new_product px-[10px] py-[10px] h-[60%] hidden ">
+          <div class="all flex justify-evenly w-full relative">
+            <div class="image  bg-[url('images/image-product-1.jpg')] bg-no-repeat bg-cover w-[40px] h-[40px] rounded-sm"></div>
+            <div class="infoForProduct flex flex-col w-[70%]">
+              <h1 class="text-[#68707d] text-[.8rem]"> Fall Limited Edition Sneakers</h1>
+              <h1 class="text-[.8rem] text-[#68707d] font-bold">$125.00 x <span class="quantity">N</span> <span class="text-black">$</span><span class="price text-black">12332</span></h1>
+            </div>
+            <div class="delete bg-[url('images/icon-delete.svg')] bg-no-repeat bg-cover bg-center w-[10px] h-[12px] absolute top-[16px] right-0 cursor-pointer"></div>
+          </div>
+          <button class="text-white text-[.9rem] bg-[#ff7d1a] w-[248px] h-[40px] rounded-lg mt-[20px] ml-[12px]">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </nav> 
+
+   <main class="w-[65%] mx-auto mt-[50px] h-[440px] flex flex-row justify-between max-[1115px]:w-[70%] max-[1058px]:w-[80%] max-[924px]:w-[90%] max-[757px]:flex-col max-[757px]:h-[700px] max-[516px]:w-full max-[328px]:h-[900px]">
+      <div class="picProducts flex flex-col justify-between w-[45%] h-auto max-[757px]:w-[90%] max-[757px]:m-auto">
+        <div class="pic_product bg-[url('images/image-product-1.jpg')] bg-no-repeat bg-cover w-[100%] h-[332px] rounded-xl cursor-pointer"></div>
+        <div class="other_pic_product flex justify-between w-full max-[757px]:w-[60%] max-[757px]:justify-evenly max-[757px]:m-auto max-[616px]:w-[80%] max-[458px]:w-[100%]">
+          <div class="pic_product_1 bg-[url('images/image-product-1.jpg')] bg-no-repeat bg-cover w-[81px] h-[81px] rounded-lg border-[#ff7d1a] border-[2px] opacity-60 cursor-pointer"></div>
+          <div class="pic_product_2 bg-[url('images/image-product-2.jpg')] bg-no-repeat bg-cover w-[81px] h-[81px] rounded-lg cursor-pointer hover:opacity-60"></div>
+          <div class="pic_product_3 bg-[url('images/image-product-3.jpg')] bg-no-repeat bg-cover w-[81px] h-[81px] rounded-lg cursor-pointer hover:opacity-60"></div>
+          <div class="pic_product_4 bg-[url('images/image-product-4.jpg')] bg-no-repeat bg-cover w-[81px] h-[81px] rounded-lg cursor-pointer hover:opacity-60"></div>
+        </div>
+      </div>
+
+      <div class="info flex flex-col justify-evenly w-[50%] max-[757px]:w-[90%] max-[757px]:m-auto max-[757px]:h-[400px]">
+        <h1 class="text-[#ff7d1a] font-bold">Sneaker Company</h1>
+        <h1 class="text-[2.4rem] font-bold leading-[3rem]">Fall Limited Edition Sneakers</h1>
+        <p class="text-[#68707d] font-medium">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="amount flex flex-col w-[140px]">
+            <div class="price_new flex justify-between">
+              <h1 class="text-[1.6rem] font-bold">$125.00</h1>
+              <h1 class="text-[#ff7d1a] text-[1rem] font-bold rounded-lg text-center bg-[#ff7d1a4e] h-[23px] w-[44px] self-center">50%</h1>
+            </div>
+            <h1 class="text-[#b6bcc8] line-through font-bold">$250.00</h1>
+          </div>
+          <div class="quantity-addTocart flex justify-between w-[90%] max-[328px]:flex-col">
+            <div class="quantity flex w-[130px] h-[40px] px-[10px]  rounded-lg justify-between bg-[#f7f8fd]  max-[328px]:m-auto">
+              <div class="minus bg-[url('images/icon-minus.svg')] self-center bg-no-repeat bg-cover bg-center w-[10px] h-[4px]  cursor-pointer"></div>
+              <div class="NumberOf_quantity self-center font-bold">0</div>
+              <div class="plus bg-[url('images/icon-plus.svg')] self-center bg-no-repeat bg-cover bg-center w-[8px] h-[9px] cursor-pointer"></div>
+            </div>
+            <div class="addToCart flex flex-row w-[200px] h-[40px] justify-center bg-[#ff7d1a] hover:bg-[#ff7d1a9d] text-white rounded-lg cursor-not-allowed max-[328px]:m-auto">
+              <div class="basket bg-[url('images/shopping-cart-(1).png')] bg-no-repeat bg-cover w-[22px] h-[20px] self-center"></div>
+              <h1 class="self-center">Add to cart</h1>
+            </div>
+          </div>
+      </div>
+    </main>
+
+    <div class="picProductss absolute top-0 left-0  w-full h-full bg-black/60 hidden">
+      <div class="w-[400px] h-[430px] absolute top-[20%] left-[30%]">
+        <div class="close_product bg-[url('images/close-color.png')] bg-no-repeat bg-cover w-[20px] h-[20px] absolute top-[-29px] right-[0px] cursor-pointer"></div>
+        <div class="picProduct_2 bg-[url('images/image-product-1.jpg')] bg-no-repeat bg-cover w-[100%] h-[332px] rounded-xl cursor-pointer"></div>
+        <div class="next absolute top-[141px] right-[-18px] bg-[url('images/icon-next.svg')] bg-white bg-no-repeat bg-center w-[16px] h-[22px] p-[17px]  rounded-[50%] hover:bg-[url('/images/right-color.png')] cursor-pointer"></div>
+        <div class="previous absolute top-[141px] left-[-18px] bg-[url('images/icon-previous.svg')] bg-white bg-no-repeat bg-center w-[16px] h-[22px] p-[17px]  rounded-[50%] hover:bg-[url('/images/left-color.png')] cursor-pointer"></div>
+        <div class="other_pic_product flex justify-evenly w-[350px] mt-[10px] mx-auto">
+          <div class="pic_product_one bg-[url('images/image-product-1.jpg')] bg-no-repeat bg-cover w-[81px] h-[81px] rounded-lg border-[#ff7d1a] border-[2px] opacity-60 cursor-pointer"></div>
+          <div class="pic_product_two bg-[url('images/image-product-2.jpg')] bg-no-repeat bg-cover w-[81px] h-[81px] rounded-lg cursor-pointer hover:opacity-60"></div>
+          <div class="pic_product_three bg-[url('images/image-product-3.jpg')] bg-no-repeat bg-cover w-[81px] h-[81px] rounded-lg cursor-pointer hover:opacity-60"></div>
+          <div class="pic_product_four bg-[url('images/image-product-4.jpg')] bg-no-repeat bg-cover w-[81px] h-[81px] rounded-lg cursor-pointer hover:opacity-60"></div>
+        </div>
+      </div>
+    </div>
+    
+  
+  <script src="main.js"></script>
+</body>
+</html>
